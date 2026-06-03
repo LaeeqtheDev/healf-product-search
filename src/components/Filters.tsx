@@ -4,12 +4,7 @@ import type {
   SortOption,
 } from "@/lib/types";
 
-/**
- * UI filter state. Prices are kept as strings because that's what the inputs
- * hold (and "" cleanly means "unset"); they're converted to numbers only when
- * the query string is built. Keeping this as the single shape passed around
- * makes URL-sync and reset trivial.
- */
+
 export interface FilterState {
   q: string;
   vendor: string; // "" = all vendors
@@ -32,8 +27,9 @@ const SORT_LABELS: Record<SortOption, string> = {
   relevance: "Relevance",
   price_asc: "Price: low to high",
   price_desc: "Price: high to low",
-  title_asc: "Name: Aâ€“Z",
+  title_asc: "Name: A–Z",
 };
+
 
 const AVAILABILITY_LABELS: Record<AvailabilityFilter, string> = {
   all: "All",
