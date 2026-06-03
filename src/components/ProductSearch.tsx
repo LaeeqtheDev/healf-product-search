@@ -108,7 +108,7 @@ export function ProductSearch(): React.ReactElement {
         <h1 className="font-serif text-3xl text-ink">Healf</h1>
         <p className="text-sm text-sage-600">
           Search the wellness catalogue
-          {facets ? ` Â· ${facets.totalProducts.toLocaleString()} products` : ""}
+          {facets ? ` · ${facets.totalProducts.toLocaleString()} products` : ""}
         </p>
       </header>
 
