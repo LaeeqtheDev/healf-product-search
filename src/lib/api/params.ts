@@ -2,7 +2,7 @@ import {z} from 'zod'
 import { ProductSearchParams } from '../types';
 
 const MAX_PAGE_SIZE=100;
-const DefaultPageSize=20;
+const DefaultPageSize=24;
 
 export const SearchParamsSchema = z.object({
     q: z.string().trim().default(""),
