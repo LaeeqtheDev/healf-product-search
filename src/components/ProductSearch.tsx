@@ -103,7 +103,7 @@ export function ProductSearch(): React.ReactElement {
   const products = data?.data ?? [];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+    <div className="mx-auto max-w-12xl px-4 py-8 sm:px-6">
       <header className="mb-6">
         <h1 className="font-serif text-3xl text-ink">Healf</h1>
         <p className="text-sm text-sage-600">
