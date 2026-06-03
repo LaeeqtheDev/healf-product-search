@@ -94,7 +94,7 @@ export function Filters({filters,facets,onChange,onReset,}: {filters: FilterStat
             className={fieldClass}
             aria-label="Minimum price"
           />
-          <span className="text-sage-600">â€“</span>
+          <span className="text-sage-600">—</span>
           <input
             type="number"
             inputMode="decimal"

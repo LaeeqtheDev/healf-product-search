@@ -10,7 +10,7 @@ export const SearchParamsSchema = z.object({
     minPrice: z.coerce.number().nonnegative().optional(),
     maxPrice: z.coerce.number().nonnegative().optional(),
     availability: z.enum(["in_stock", "out_of_stock", "all"]).default("all"),
-    sort: z.enum(["relevance", "price_asc", "price_desc"]).default("relevance"),
+    sort: z.enum(["relevance", "price_asc", "price_desc","title_asc"]).default("relevance"),
     page: z.coerce.number().int().positive().default(1),
     pageSize: z.coerce.number().int().positive().max(MAX_PAGE_SIZE).default(DefaultPageSize),
 })
