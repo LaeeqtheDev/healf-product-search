@@ -1,6 +1,6 @@
 import type { Product } from "@/lib/types";
 import { formatPriceRange } from "@/lib/format";
-    
+
 export function ProductCard({ product }: { product: Product }): React.ReactElement {
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border border-sage-100 bg-white transition hover:border-sage-600/40 hover:shadow-sm">

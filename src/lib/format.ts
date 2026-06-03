@@ -1,4 +1,4 @@
-{/** Format a numeric amount as a currency string (e.g. 18.55 → "£18.55"). */}
+{/** Format a numeric amount as a currency string (e.g. 18.55 â†’ "Â£18.55"). */}
 export function formatPrice(amount: number, currency: string): string {
     try {
       return new Intl.NumberFormat("en-GB", {
@@ -20,6 +20,6 @@ export function formatPrice(amount: number, currency: string): string {
     currency: string,
   ): string {
     if (min === max) return formatPrice(min, currency);
-    return `${formatPrice(min, currency)} – ${formatPrice(max, currency)}`;
+    return `${formatPrice(min, currency)} â€“ ${formatPrice(max, currency)}`;
   }
   

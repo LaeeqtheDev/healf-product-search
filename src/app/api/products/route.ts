@@ -1,11 +1,11 @@
-
 import { NextResponse } from "next/server";
 import { parseSearchParams } from "@/lib/api/params";
 import { getProductRepository } from "@/lib/data/product-repository";
 import type { ApiError, ProductSearchResponse } from "@/lib/types";
 
-
-export async function GET(request: Request,): Promise<NextResponse<ProductSearchResponse | ApiError>> {
+export async function GET(
+  request: Request,
+): Promise<NextResponse<ProductSearchResponse | ApiError>> {
   const { searchParams } = new URL(request.url);
 
   const parsed = parseSearchParams(searchParams);

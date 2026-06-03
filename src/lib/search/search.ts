@@ -33,7 +33,7 @@ const WEIGHT_DESCRIPTION = 1;
 
 
 export function scoreProduct(item: IndexedProduct, tokens: string[]): number {
-    if (tokens.length === 0) return 1; // no query → everything "matches" equally
+    if (tokens.length === 0) return 1; // no query â†’ everything "matches" equally
   
     let score = 0;
     for (const token of tokens) {
