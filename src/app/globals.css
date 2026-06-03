@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
-:root {
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+@theme {
+  --color-sand: #faf7f0;
+  --color-ink: #1f2933;
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e2ebe2;
+  --color-sage-200: #c5d6c5;
+  --color-sage-600: #4a7c59;
+  --color-sage-700: #3a6347;
 
-  --sand: #faf7f0;
-  --ink: #1f2933;
+  --font-family-serif: Georgia, "Times New Roman", serif;
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -13,12 +18,11 @@ html {
 }
 
 body {
-  background: var(--sand);
-  color: var(--ink);
-  font-family: var(--font-sans);
+  background-color: #faf7f0;
+  color: #1f2933;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
-/* Hide number-input spinners for the price fields */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   appearance: none;

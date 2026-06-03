@@ -61,6 +61,7 @@ function toStatus(value: string | undefined): ProductStatus | null {
 
 
 export function rawRowToProduct(row: RawRow): Product | null {
+  
   const id = row.ID?.trim();
   const title = row.TITLE?.trim();
   if (!id || !title) return null;
@@ -97,3 +98,6 @@ export function rawRowToProduct(row: RawRow): Product | null {
     tags: parseTags(row.TAGS),
   };
 }
+
+
+
