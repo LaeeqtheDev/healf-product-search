@@ -1,9 +1,7 @@
 import type { PaginationMeta } from "@/lib/types";
 
-
-export function Pagination({pagination,onPageChange}: {pagination: PaginationMeta;onPageChange: (page: number) => void;}) {
-  const { page, totalPages, hasNextPage, hasPreviousPage, totalItems } =
-    pagination;
+export function Pagination({ pagination, onPageChange }: { pagination: PaginationMeta; onPageChange: (page: number) => void; }) {
+  const { page, totalPages, hasNextPage, hasPreviousPage, totalItems } = pagination;
 
   if (totalItems === 0) return null;
 
@@ -17,13 +15,13 @@ export function Pagination({pagination,onPageChange}: {pagination: PaginationMet
         disabled={!hasPreviousPage}
         className="rounded-md border border-sage-100 bg-white px-4 py-2 text-sm font-medium text-ink transition enabled:hover:border-sage-600 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        â† Previous
+        &larr; Previous
       </button>
 
       <span className="text-sm text-sage-600">
         Page <span className="font-medium text-ink">{page}</span> of{" "}
         <span className="font-medium text-ink">{totalPages}</span>
-        <span className="ml-2 hidden sm:inline">Â· {totalItems} results</span>
+        <span className="ml-2 hidden sm:inline">&middot; {totalItems} results</span>
       </span>
 
       <button
@@ -31,7 +29,7 @@ export function Pagination({pagination,onPageChange}: {pagination: PaginationMet
         disabled={!hasNextPage}
         className="rounded-md border border-sage-100 bg-white px-4 py-2 text-sm font-medium text-ink transition enabled:hover:border-sage-600 disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Next â†’
+        Next &rarr;
       </button>
     </nav>
   );
