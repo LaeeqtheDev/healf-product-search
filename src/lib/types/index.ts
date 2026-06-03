@@ -50,3 +50,28 @@ export interface Product {
     hasNextPage: boolean;
     hasPreviousPage: boolean;
   }
+
+
+  export interface ProductSearchResponse {
+    data: Product[];
+    pagination: PaginationMeta;
+    appliedParams: ProductSearchParams;
+  }
+  
+  export interface FacetValue {
+    value: string;
+    count: number;
+  }
+  
+
+  export interface FacetsResponse {
+    vendors: FacetValue[];
+    priceBounds: { min: number; max: number };
+    currency: string;
+    totalProducts: number;
+  }
+  
+  export interface ApiError {
+    error: { message: string; details?: unknown };
+  }
+  
