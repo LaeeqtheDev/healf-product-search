@@ -4,7 +4,7 @@ import { parse } from "csv-parse";
 import type { Product } from "@/lib/types";
 import { rawRowToProduct, type RawRow } from "./normalizer";
 
-const CSV_PATH = join(process.cwd(), "data", "products.csv");
+const CSV_PATH = join(process.cwd(), "data", "csv.csv");
 
 
 let productsPromise: Promise<readonly Product[]> | null = null;

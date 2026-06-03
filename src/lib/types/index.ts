@@ -30,6 +30,17 @@ export interface Product {
   | "title_asc";
 
 
+  export interface ProductSearchParams {
+    query: string;
+    vendor: string | null;
+    minPrice: number | null;
+    maxPrice: number | null;
+    availability: AvailabilityFilter;
+    sort: SortOption;
+    page: number;
+    pageSize: number;
+  }
+  
 
   export interface PaginationMeta {
     page: number;
